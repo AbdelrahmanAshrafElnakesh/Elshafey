@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ahmed Elshafey | Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+            overflow-x: hidden;
+        }
+        .serif {
+            font-family: 'Playfair Display', serif;
+        }
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .quote-accent {
+            border-left: 4px solid #de682d; /* Pitzer-adjacent orange accent */
+        }
+        .bg-pitzer-soft {
+            background-color: #f9f7f2;
+        }
+        .project-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        @media (min-width: 768px) {
+            .project-card:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 10px 30px -10px rgba(0,0,0,0.1);
+            }
+        }
+    </style>
+</head>
+<body class="bg-pitzer-soft text-slate-800 leading-relaxed">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-white/80 backdrop-blur-md border-b border-stone-200">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 py-4 flex justify-between items-center">
+            <span class="font-semibold tracking-tight text-base sm:text-lg">Ahmed Elshafey</span>
+            <div class="flex space-x-4 sm:space-x-8 text-[10px] sm:text-sm uppercase tracking-widest font-medium text-slate-500">
+                <a href="#intro" class="hover:text-orange-600 transition-colors">Intro</a>
+                <a href="#principles" class="hover:text-orange-600 transition-colors">Principles</a>
+                <a href="#projects" class="hover:text-orange-600 transition-colors">Projects</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header id="intro" class="min-h-screen flex flex-col justify-center items-center px-6 pt-20">
+        <div class="max-w-3xl w-full fade-in" id="hero-content">
+            <h1 class="serif text-4xl sm:text-5xl md:text-7xl mb-6 md:mb-8 text-slate-900">Ahmed Elshafey</h1>
+            <div class="quote-accent pl-4 sm:pl-6 py-2 italic text-lg sm:text-xl md:text-2xl text-slate-600 leading-relaxed">
+                "Hi, I’m Ahmed Elshafey. This site brings together a small set of projects and initiatives that shaped the direction of my work. I am drawn to spaces where ideas are tested through action, responsibility is shared, and learning extends beyond individual outcomes."
+            </div>
+            <p class="mt-8 text-base sm:text-lg text-slate-500 max-w-2xl">
+                What appears here reflects the kind of contribution I aim to make, and the questions that continue to guide it.
+            </p>
+        </div>
+        <div class="mt-16 sm:mt-20 animate-bounce">
+            <a href="#principles" class="text-slate-400">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 13l5 5 5-5M7 6l5 5 5-5"/></svg>
+            </a>
+        </div>
+    </header>
+
+    <!-- Core Principles Section -->
+    <section id="principles" class="py-16 sm:py-24 bg-white border-y border-stone-100 px-6">
+        <div class="max-w-5xl mx-auto">
+            <div class="grid md:grid-cols-3 gap-12">
+                <div class="fade-in">
+                    <h2 class="serif text-3xl mb-6 text-slate-900">Core Principles</h2>
+                    <p class="text-slate-600">
+                        In preparing this portfolio for the <strong>Pitzer College Admissions Committee</strong>, I have selected works that demonstrate my commitment to Pitzer's core values: Social Responsibility, Intercultural Understanding, and Environmental Sustainability.
+                    </p>
+                </div>
+                
+                <div class="md:col-span-2 space-y-10 sm:space-y-12">
+                    <div class="fade-in">
+                        <h3 class="font-semibold text-orange-700 uppercase tracking-widest text-xs sm:text-sm mb-3">01. Shared Responsibility</h3>
+                        <p class="text-lg sm:text-xl text-slate-800">How can a project empower every participant rather than just the leader?</p>
+                    </div>
+                    <div class="fade-in">
+                        <h3 class="font-semibold text-orange-700 uppercase tracking-widest text-xs sm:text-sm mb-3">02. Collective Learning</h3>
+                        <p class="text-lg sm:text-xl text-slate-800">What does a "failed" initiative teach a community that a "successful" individual achievement cannot?</p>
+                    </div>
+                    <div class="fade-in">
+                        <h3 class="font-semibold text-orange-700 uppercase tracking-widest text-xs sm:text-sm mb-3">03. Action-Oriented Theory</h3>
+                        <p class="text-lg sm:text-xl text-slate-800">How does this specific project move a theoretical ideal into a tangible, lived reality?</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects & Research Section -->
+    <section id="projects" class="py-16 sm:py-24 px-6 bg-pitzer-soft border-b border-stone-200">
+        <div class="max-w-5xl mx-auto">
+            <h2 class="serif text-3xl sm:text-4xl mb-10 sm:text-12 text-slate-900 fade-in">Selected Work & Research</h2>
+            
+            <div class="grid gap-8 sm:gap-12">
+                <!-- Research Entry: AI in Education -->
+                <div class="project-card bg-stone-100 p-6 sm:p-10 md:p-12 rounded-2xl border border-stone-300 fade-in">
+                    <div class="flex flex-col md:flex-row justify-between items-start mb-8 sm:mb-10">
+                        <div class="flex items-center gap-4 sm:gap-6">
+                            <div class="w-12 h-12 sm:w-16 sm:h-16 bg-white rounded-xl flex items-center justify-center border border-stone-200 flex-shrink-0">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="text-slate-700 w-8 h-8 sm:w-10 sm:h-10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+                            </div>
+                            <div>
+                                <span class="text-slate-500 font-semibold tracking-widest text-[10px] sm:text-xs uppercase">Cross-National Research Study</span>
+                                <h3 class="serif text-2xl sm:text-3xl mt-1 text-slate-900">The Role of AI in Education</h3>
+                            </div>
+                        </div>
+                        <div class="mt-4 md:mt-0 px-4 py-1 bg-white border border-stone-200 rounded-full text-xs sm:text-sm font-medium text-slate-600">
+                            Research Thesis
+                        </div>
+                    </div>
+                    
+                    <div class="grid md:grid-cols-2 gap-8 sm:gap-10">
+                        <div class="space-y-6">
+                            <div>
+                                <h4 class="font-semibold text-slate-800 mb-2">The Inquiry</h4>
+                                <p class="text-sm sm:text-base text-slate-600 leading-relaxed">
+                                    A cross-national study examining how high school students use AI and its effects on learning, skills, and academic ethics. Surveying 217 students across 42 countries, the research revealed that AI is widely integrated into daily learning, improving writing and comprehension, but raising critical questions about dependency.
+                                </p>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-slate-800 mb-2">Core Finding</h4>
+                                <p class="text-sm sm:text-base text-slate-600 leading-relaxed">
+                                    The risk lies not in the tool itself, but in the decline of critical thinking when overreliance occurs. The study highlighted the urgent need for AI literacy and policies that balance technological benefits with essential skill development.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="bg-white p-6 sm:p-8 rounded-xl border border-stone-200 flex flex-col justify-center">
+                            <h4 class="font-semibold text-slate-800 mb-4">Reflective Outcome</h4>
+                            <p class="text-sm sm:text-base text-slate-600 italic leading-relaxed">
+                                "This research reinforced my understanding of how technology can both empower and challenge education. It underscored the responsibility required to integrate these tools thoughtfully—ensuring they serve as a catalyst for growth rather than a replacement for thought."
+                            </p>
+                            <div class="mt-6 sm:mt-8 flex flex-wrap gap-2">
+                                <span class="px-2 py-1 bg-stone-50 border border-stone-200 rounded text-[10px] sm:text-xs text-slate-500">Academic Ethics</span>
+                                <span class="px-2 py-1 bg-stone-50 border border-stone-200 rounded text-[10px] sm:text-xs text-slate-500">Cross-National Study</span>
+                                <span class="px-2 py-1 bg-stone-50 border border-stone-200 rounded text-[10px] sm:text-xs text-slate-500">AI Literacy</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Initiative: STEM Pathmakers -->
+                <div class="project-card bg-white p-6 sm:p-10 md:p-12 rounded-2xl border border-stone-200 fade-in">
+                    <div class="flex flex-col md:flex-row justify-between items-start mb-8 sm:mb-10">
+                        <div class="flex items-center gap-4 sm:gap-6">
+                            <div class="w-12 h-12 sm:w-16 sm:h-16 bg-amber-50 rounded-xl flex items-center justify-center border border-amber-100 flex-shrink-0">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="text-amber-600 w-8 h-8 sm:w-10 sm:h-10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                            </div>
+                            <div>
+                                <span class="text-amber-600 font-semibold tracking-widest text-[10px] sm:text-xs uppercase">Community Initiative</span>
+                                <h3 class="serif text-2xl sm:text-3xl mt-1 text-slate-900">STEM Pathmakers</h3>
+                            </div>
+                        </div>
+                        <div class="mt-4 md:mt-0 px-4 py-1 bg-slate-100 rounded-full text-xs sm:text-sm font-medium text-slate-600">
+                            Founder
+                        </div>
+                    </div>
+                    
+                    <div class="grid md:grid-cols-2 gap-8 sm:gap-10">
+                        <div class="space-y-6">
+                            <div>
+                                <h4 class="font-semibold text-slate-800 mb-2">The Context</h4>
+                                <p class="text-sm sm:text-base text-slate-600 leading-relaxed">
+                                    Realizing that access to STEM education was uneven and information about opportunities was often hard to find, I founded STEM Pathmakers to create a supportive community where young learners could explore STEM confidently.
+                                </p>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-slate-800 mb-2">The Action</h4>
+                                <p class="text-sm sm:text-base text-slate-600 leading-relaxed">
+                                    Through tutoring, mentorship, and workshops, the initiative helps students understand challenging concepts, navigate academic pathways, and discover their potential in science, technology, engineering, and math.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="bg-stone-50 p-6 sm:p-8 rounded-xl border border-stone-100 flex flex-col justify-center">
+                            <h4 class="font-semibold text-slate-800 mb-4">Reflective Outcome</h4>
+                            <p class="text-sm sm:text-base text-slate-600 italic leading-relaxed">
+                                "Leading STEM Pathmakers taught me how equitable access to knowledge can empower others and build confidence in ways that extend far beyond the classroom. It reinforced my commitment to social responsibility through educational equity."
+                            </p>
+                            <div class="mt-6 sm:mt-8 flex flex-wrap gap-2">
+                                <span class="px-2 py-1 bg-white border border-stone-200 rounded text-[10px] sm:text-xs text-slate-500">Mentorship</span>
+                                <span class="px-2 py-1 bg-white border border-stone-200 rounded text-[10px] sm:text-xs text-slate-500">Education Equity</span>
+                                <span class="px-2 py-1 bg-white border border-stone-200 rounded text-[10px] sm:text-xs text-slate-500">Leadership</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project One: Agro AI -->
+                <div class="project-card bg-white p-6 sm:p-10 md:p-12 rounded-2xl border border-stone-200 fade-in">
+                    <div class="flex flex-col md:flex-row justify-between items-start mb-8 sm:mb-10">
+                        <div class="flex items-center gap-4 sm:gap-6">
+                            <div class="w-12 h-12 sm:w-16 sm:h-16 bg-orange-50 rounded-xl flex items-center justify-center border border-orange-100 flex-shrink-0">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="text-orange-600 w-8 h-8 sm:w-10 sm:h-10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M12 8v4"/><path d="M12 16h.01"/></svg>
+                            </div>
+                            <div>
+                                <span class="text-orange-600 font-semibold tracking-widest text-[10px] sm:text-xs uppercase">Project 01</span>
+                                <h3 class="serif text-2xl sm:text-3xl mt-1 text-slate-900">Agro AI</h3>
+                            </div>
+                        </div>
+                        <div class="mt-4 md:mt-0 px-4 py-1 bg-slate-100 rounded-full text-xs sm:text-sm font-medium text-slate-600">
+                            2025
+                        </div>
+                    </div>
+                    
+                    <div class="grid md:grid-cols-2 gap-8 sm:gap-10">
+                        <div class="space-y-6">
+                            <div>
+                                <h4 class="font-semibold text-slate-800 mb-2">The Context</h4>
+                                <p class="text-sm sm:text-base text-slate-600 leading-relaxed">
+                                    A planning tool using satellite imagery, soil data, and machine learning to guide farmers on what and when to plant. Designed for unreliable internet environments, it transforms complex data into practical advice.
+                                </p>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-slate-800 mb-2">The Challenge</h4>
+                                <p class="text-sm sm:text-base text-slate-600 leading-relaxed">
+                                    Balancing technological precision with real-world usability, ensuring sophisticated insights remained accessible to those whose livelihoods depend on the land.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="bg-stone-50 p-6 sm:p-8 rounded-xl border border-stone-100 flex flex-col justify-center">
+                            <h4 class="font-semibold text-slate-800 mb-4">Reflective Outcome</h4>
+                            <p class="text-sm sm:text-base text-slate-600 italic leading-relaxed">
+                                "This project showed me how data and local knowledge must come together to support sustainable agriculture. It reinforced my belief that powerful technologies must listen to the community."
+                            </p>
+                            <div class="mt-6 sm:mt-8 flex flex-wrap gap-2">
+                                <span class="px-2 py-1 bg-white border border-stone-200 rounded text-[10px] sm:text-xs text-slate-500">Sustainability</span>
+                                <span class="px-2 py-1 bg-white border border-stone-200 rounded text-[10px] sm:text-xs text-slate-500">Machine Learning</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project Two: AfriCare -->
+                <div class="project-card bg-white p-6 sm:p-10 md:p-12 rounded-2xl border border-stone-200 fade-in">
+                    <div class="flex flex-col md:flex-row justify-between items-start mb-8 sm:mb-10">
+                        <div class="flex items-center gap-4 sm:gap-6">
+                            <div class="w-12 h-12 sm:w-16 sm:h-16 bg-blue-50 rounded-xl flex items-center justify-center border border-blue-100 flex-shrink-0">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="text-blue-600 w-8 h-8 sm:w-10 sm:h-10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+                            </div>
+                            <div>
+                                <span class="text-blue-600 font-semibold tracking-widest text-[10px] sm:text-xs uppercase">Project 02</span>
+                                <h3 class="serif text-2xl sm:text-3xl mt-1 text-slate-900">AfriCare</h3>
+                            </div>
+                        </div>
+                        <div class="mt-4 md:mt-0 px-4 py-1 bg-slate-100 rounded-full text-xs sm:text-sm font-medium text-slate-600">
+                            2025
+                        </div>
+                    </div>
+                    
+                    <div class="grid md:grid-cols-2 gap-8 sm:gap-10">
+                        <div class="space-y-6">
+                            <div>
+                                <h4 class="font-semibold text-slate-800 mb-2">The Context</h4>
+                                <p class="text-sm sm:text-base text-slate-600 leading-relaxed">
+                                    An AI-powered health companion making healthcare accessible in underserved regions. It addresses language barriers and poor internet through symptom insights, telemedicine, and multilingual record management.
+                                </p>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-slate-800 mb-2">The Challenge</h4>
+                                <p class="text-sm sm:text-base text-slate-600 leading-relaxed">
+                                    The real challenge wasn’t building the technology; it was making it usable and meaningful for people with vastly different levels of digital literacy and diverse cultural backgrounds.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="bg-stone-50 p-6 sm:p-8 rounded-xl border border-stone-100 flex flex-col justify-center">
+                            <h4 class="font-semibold text-slate-800 mb-4">Reflective Outcome</h4>
+                            <p class="text-sm sm:text-base text-slate-600 italic leading-relaxed">
+                                "Through this project, I learned how technology can empower communities and bridge gaps in access while respecting local contexts—bridging education and care where it's needed most."
+                            </p>
+                            <div class="mt-6 sm:mt-8 flex flex-wrap gap-2">
+                                <span class="px-2 py-1 bg-white border border-stone-200 rounded text-[10px] sm:text-xs text-slate-500">Public Health</span>
+                                <span class="px-2 py-1 bg-white border border-stone-200 rounded text-[10px] sm:text-xs text-slate-500">Multilingual AI</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project Three: HerGuardian -->
+                <div class="project-card bg-white p-6 sm:p-10 md:p-12 rounded-2xl border border-stone-200 fade-in">
+                    <div class="flex flex-col md:flex-row justify-between items-start mb-8 sm:mb-10">
+                        <div class="flex items-center gap-4 sm:gap-6">
+                            <div class="w-12 h-12 sm:w-16 sm:h-16 bg-purple-50 rounded-xl flex items-center justify-center border border-purple-100 flex-shrink-0">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="text-purple-600 w-8 h-8 sm:w-10 sm:h-10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                            </div>
+                            <div>
+                                <span class="text-purple-600 font-semibold tracking-widest text-[10px] sm:text-xs uppercase">Project 03</span>
+                                <h3 class="serif text-2xl sm:text-3xl mt-1 text-slate-900">HerGuardian</h3>
+                            </div>
+                        </div>
+                        <div class="mt-4 md:mt-0 px-4 py-1 bg-slate-100 rounded-full text-xs sm:text-sm font-medium text-slate-600">
+                            2025
+                        </div>
+                    </div>
+                    
+                    <div class="grid md:grid-cols-2 gap-8 sm:gap-10">
+                        <div class="space-y-6">
+                            <div>
+                                <h4 class="font-semibold text-slate-800 mb-2">The Context</h4>
+                                <p class="text-sm sm:text-base text-slate-600 leading-relaxed">
+                                    A safety app helping women navigate public spaces using real-time location tracking and anonymous reporting to identify safe and unsafe areas within a community.
+                                </p>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-slate-800 mb-2">The Challenge</h4>
+                                <p class="text-sm sm:text-base text-slate-600 leading-relaxed">
+                                    Translating complex geolocation and incident data into clear, actionable guidance that provides safety without compromising user privacy.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="bg-stone-50 p-6 sm:p-8 rounded-xl border border-stone-100 flex flex-col justify-center">
+                            <h4 class="font-semibold text-slate-800 mb-4">Reflective Outcome</h4>
+                            <p class="text-sm sm:text-base text-slate-600 italic leading-relaxed">
+                                "HerGuardian showed me how design decisions can empower users in meaningful ways, supporting personal safety while strictly respecting privacy and social context."
+                            </p>
+                            <div class="mt-6 sm:mt-8 flex flex-wrap gap-2">
+                                <span class="px-2 py-1 bg-white border border-stone-200 rounded text-[10px] sm:text-xs text-slate-500">Social Safety</span>
+                                <span class="px-2 py-1 bg-white border border-stone-200 rounded text-[10px] sm:text-xs text-slate-500">Geolocation</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project Four: Personality-Aware Entertainment -->
+                <div class="project-card bg-white p-6 sm:p-10 md:p-12 rounded-2xl border border-stone-200 fade-in">
+                    <div class="flex flex-col md:flex-row justify-between items-start mb-8 sm:mb-10">
+                        <div class="flex items-center gap-4 sm:gap-6">
+                            <div class="w-12 h-12 sm:w-16 sm:h-16 bg-emerald-50 rounded-xl flex items-center justify-center border border-emerald-100 flex-shrink-0">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="text-emerald-600 w-8 h-8 sm:w-10 sm:h-10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm0 18a8 8 0 1 1 8-8 8 8 0 0 1-8 8z"/><path d="M12 6a6 6 0 1 0 6 6 6 6 0 0 0-6-6z"/></svg>
+                            </div>
+                            <div>
+                                <span class="text-emerald-600 font-semibold tracking-widest text-[10px] sm:text-xs uppercase">Project 04</span>
+                                <h3 class="serif text-2xl sm:text-3xl mt-1 text-slate-900">Personality-Aware Ent.</h3>
+                            </div>
+                        </div>
+                        <div class="mt-4 md:mt-0 px-4 py-1 bg-slate-100 rounded-full text-xs sm:text-sm font-medium text-slate-600">
+                            2025
+                        </div>
+                    </div>
+                    
+                    <div class="grid md:grid-cols-2 gap-8 sm:gap-10">
+                        <div class="space-y-6">
+                            <div>
+                                <h4 class="font-semibold text-slate-800 mb-2">The Context</h4>
+                                <p class="text-sm sm:text-base text-slate-600 leading-relaxed">
+                                    An AI assistant that tailors entertainment to personality, mood, and preferences. It aims to reduce the "choice overload" that many feel when searching for uplifting or engaging content.
+                                </p>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-slate-800 mb-2">The Challenge</h4>
+                                <p class="text-sm sm:text-base text-slate-600 leading-relaxed">
+                                    Creating recommendations that go beyond genre or popularity, translating complex human emotional states and preferences into actionable suggestions.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="bg-stone-50 p-6 sm:p-8 rounded-xl border border-stone-100 flex flex-col justify-center">
+                            <h4 class="font-semibold text-slate-800 mb-4">Reflective Outcome</h4>
+                            <p class="text-sm sm:text-base text-slate-600 italic leading-relaxed">
+                                "This project showed me how technology can address everyday mental health needs by turning leisure into a tool for well-being rather than a source of frustration."
+                            </p>
+                            <div class="mt-6 sm:mt-8 flex flex-wrap gap-2">
+                                <span class="px-2 py-1 bg-white border border-stone-200 rounded text-[10px] sm:text-xs text-slate-500">Well-being</span>
+                                <span class="px-2 py-1 bg-white border border-stone-200 rounded text-[10px] sm:text-xs text-slate-500">Adaptive AI</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final Note / Humorous Closing -->
+    <section class="py-16 sm:py-24 px-6 text-center bg-white">
+        <div class="max-w-3xl mx-auto fade-in">
+            <h2 class="serif text-2xl sm:text-3xl mb-8 text-slate-900">A Note to the Pitzer Admissions Office</h2>
+            <div class="bg-pitzer-soft p-6 sm:p-10 rounded-3xl border border-stone-100 shadow-sm relative">
+                <div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-orange-600 text-white px-4 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest">
+                    Closing Statement
+                </div>
+                <p class="text-lg sm:text-xl text-slate-700 leading-relaxed mb-6">
+                    Now you’re in front of a phenomenon: a student who is a strong match for your values, with experience in both Cognitive Science and STS. All that is left to do is admit me and send my files to the financial office.
+                </p>
+                <div class="h-px w-16 bg-stone-300 mx-auto mb-6"></div>
+                <p class="text-[10px] sm:text-sm text-slate-500 italic uppercase tracking-tighter">
+                    Just kidding. Please complete your review. I hope this does not cause any tension and let us avoid the rejection button.
+                </p>
+            </div>
+            
+            <p class="mt-12 serif italic text-xl sm:text-2xl text-slate-400">
+                “The world is not just to be known, but to be changed.”
+            </p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 border-t border-stone-200 text-center text-[10px] sm:text-sm text-slate-400 px-6">
+        <p>&copy; 2026 Ahmed Elshafey — Portfolio for Pitzer College Admissions</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const observerOptions = { threshold: 0.1 };
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+        });
+
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    const offset = 80; // Nav height
+                    const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - offset;
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
